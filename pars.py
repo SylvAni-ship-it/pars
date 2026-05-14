@@ -17,4 +17,6 @@ response = requests.get(f"https://m.avito.ru/{sity}/nedvizhimost", headers=custo
 
 soup = BeautifulSoup(response.text, "html.parser")
 
+res = soup.find("a", class_="styles-module-root-cfrVG styles-module-root_underlineOffset_size-m-ce9r8 styles-module-root_noVisited-U4swI styles-module-root_preset_black-VfJP4")
 
+print(res.text)
